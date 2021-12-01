@@ -1,9 +1,24 @@
+import {BrowserRouter, Route} from 'react-router-dom';
+import HomePage from './components/views/HomePage';
+import CoinPage from './components/views/CoinPage';
+import Header from './components/Header';
+
 const App = () => {
 	return (
-		<div>
-			<h1>React Crypto Stats</h1>
-			<p>A cryptocurrency statistical analysis app coded in React.</p>
-		</div>
+		<BrowserRouter>
+			<div>
+				<Header />
+				<Route 
+					path='/' 
+					exact
+					component={HomePage}
+				/>
+				<Route 
+					path='/coin/:id/' 
+					component={CoinPage}
+				/>
+			</div>
+		</BrowserRouter>
 	);
 }
 
