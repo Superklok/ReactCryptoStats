@@ -12,11 +12,3 @@ body {
 a {
 	text-decoration: none;
 }
-
-.homeTitle {
-	font-family: 'Zen Tokyo Zoo', cursive;
-	font-weight: 400;
-	font-size: 5rem;
-	color: #FFD4F9;
-	word-spacing: -16px;
-}

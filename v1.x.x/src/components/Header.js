@@ -12,19 +12,18 @@ import {
 	Typography
 } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
-	title: {
-		flex: 1,
-		fontFamily: 'Zen Tokyo Zoo',
-		fontWeight: 400,
-		fontSize: '2.6rem',
-		color: '#FFBA49',
-		wordSpacing: '-8px',
-		cursor: 'pointer',
-	}
-}));
-
-const Header = () => {
+const useStyles                   = makeStyles(() => ({
+										title: {
+											flex: 1,
+											fontFamily: 'Zen Tokyo Zoo',
+											fontWeight: 400,
+											fontSize: '2.4rem',
+											color: '#FFBA49',
+											wordSpacing: -8,
+											cursor: 'pointer',
+										},
+									})),
+	  Header                      = () => {
 	const classes                 = useStyles(),
 		  history                 = useHistory(),
 		  {currency, setCurrency} = CryptoState(),
@@ -61,13 +60,16 @@ const Header = () => {
 					<Toolbar>
 						<Typography 
 							onClick={() => history.push('/')}
+							variant='h6'
 							className={classes.title}
 						>
-							React Crypto Stats
+							Crypto Stats
 						</Typography>
 						<Select
 							variant='outlined' 
 							style={{
+								fontFamily: 'Genos',
+								fontSize: '1.9rem',
 								width: 100,
 								height: 40,
 								marginRight: 15,
@@ -75,10 +77,46 @@ const Header = () => {
 							value={currency} 
 							onChange={(e) => setCurrency(e.target.value)}
 						>
-							<MenuItem value={'CAD'}>CAD</MenuItem>
-							<MenuItem value={'EUR'}>EUR</MenuItem>
-							<MenuItem value={'GBP'}>GBP</MenuItem>
-							<MenuItem value={'USD'}>USD</MenuItem>
+							<MenuItem 
+								style={{
+									fontFamily: 'Genos',
+									fontSize: '1.9rem',
+									paddingTop: 0,
+									paddingBottom: 0,
+								}}
+								value={'CAD'}
+							>CAD
+							</MenuItem>
+							<MenuItem 
+								style={{
+									fontFamily: 'Genos',
+									fontSize: '1.9rem',
+									paddingTop: 0,
+									paddingBottom: 0,
+								}}
+								value={'EUR'}
+							>EUR
+							</MenuItem>
+							<MenuItem 
+								style={{
+									fontFamily: 'Genos',
+									fontSize: '1.9rem',
+									paddingTop: 0,
+									paddingBottom: 0,
+								}}
+								value={'GBP'}
+							>GBP
+							</MenuItem>
+							<MenuItem 
+								style={{
+									fontFamily: 'Genos',
+									fontSize: '1.9rem',
+									paddingTop: 0,
+									paddingBottom: 0,
+								}}
+								value={'USD'}
+							>USD
+							</MenuItem>
 						</Select>
 					</Toolbar>
 				</Container>

@@ -10,7 +10,7 @@ const App = () => {
 							  backgroundColor: '#23001E',
 							  color: '#FFE7FC',
 							  minHeight: '100vh',
-						  }
+						  },
 					  })),
 		  classes   = useStyles();
 
