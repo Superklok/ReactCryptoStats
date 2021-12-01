@@ -6,17 +6,17 @@ import Header from './components/Header';
 
 const App = () => {
 	const useStyles = makeStyles(() => ({
-						  App: {
-							backgroundColor: '#23001E',
-							color: '#FFE7FC',
-							minHeight: '100vh',
+						  app: {
+							  backgroundColor: '#23001E',
+							  color: '#FFE7FC',
+							  minHeight: '100vh',
 						  }
 					  })),
 		  classes   = useStyles();
 
 	return (
 		<BrowserRouter>
-			<div className={classes.App}>
+			<div className={classes.app}>
 				<Header />
 				<Route 
 					path='/' 
