@@ -1,4 +1,5 @@
 import {useHistory} from 'react-router-dom';
+import {CryptoState} from '../CryptoContext';
 import {
 	AppBar, 
 	Container, 
@@ -24,33 +25,34 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Header = () => {
-	const classes     = useStyles(),
-		  history     = useHistory(),
-		  purpleTheme = createTheme({
-			  palette: {
-				  primary: {
-					  main: '#FFE7FC',
-				  },
-				  text: {
-					  primary: '#FFE7FC',
-					  secondary: 'rgba(255,231,252,0.7)',
-					  disabled: 'rgba(255,231,252,0.5)',
-				  },
-				  action: {
-					  active: '#FFE7FC',
-					  hover: 'rgba(255,231,252,0.8)',
-					  selected: 'rgba(255,231,252,0.16)',
-					  disabled: 'rgba(255,231,252,0.3)',
-					  disabledBackground: 'rgba(255,231,252,0.12)',
-				  },
-				  background: {
-					  default: '#23001E',
-					  paper: '#4A0040',
-				  },
-				  divider: 'rgba(255,231,252,0.12)',
-				  type: 'dark',
-			  },
-		  });
+	const classes                 = useStyles(),
+		  history                 = useHistory(),
+		  {currency, setCurrency} = CryptoState(),
+		  purpleTheme             = createTheme({
+										palette: {
+											primary: {
+												main: '#FFE7FC',
+											},
+											text: {
+												primary: '#FFE7FC',
+												secondary: 'rgba(255,231,252,0.7)',
+												disabled: 'rgba(255,231,252,0.5)',
+											},
+											action: {
+												active: '#FFE7FC',
+												hover: 'rgba(255,231,252,0.4)',
+												selected: 'rgba(255,231,252,0.16)',
+												disabled: 'rgba(255,231,252,0.3)',
+												disabledBackground: 'rgba(255,231,252,0.12)',
+											},
+											background: {
+												default: '#23001E',
+												paper: '#4A0040',
+											},
+											divider: 'rgba(255,231,252,0.12)',
+											type: 'dark',
+										},
+									});
 
 	return (
 		<ThemeProvider theme={purpleTheme}>
@@ -70,8 +72,12 @@ const Header = () => {
 								height: 40,
 								marginRight: 15,
 							}}
+							value={currency} 
+							onChange={(e) => setCurrency(e.target.value)}
 						>
 							<MenuItem value={'CAD'}>CAD</MenuItem>
+							<MenuItem value={'EUR'}>EUR</MenuItem>
+							<MenuItem value={'GBP'}>GBP</MenuItem>
 							<MenuItem value={'USD'}>USD</MenuItem>
 						</Select>
 					</Toolbar>
