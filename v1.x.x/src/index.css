@@ -7,8 +7,10 @@
 
 body {
 	font-family: 'Genos', sans-serif;
+	font-weight: 400;
 }
 
 a {
 	text-decoration: none;
+	color: #FFE7FC;
 }

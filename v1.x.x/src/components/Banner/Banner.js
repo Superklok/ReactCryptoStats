@@ -1,8 +1,9 @@
 import {Container, makeStyles, Typography} from "@material-ui/core";
+import Carousel from './Carousel';
 
 const useStyles = makeStyles(() => ({
 	banner: {
-		backgroundImage: 'linear-gradient(rgba(35,0,30,0.5), rgba(35,0,30,0.5)), url(./ReactCryptoStatsBG.jpg)',
+		backgroundImage: 'linear-gradient(rgba(35,0,30,0.68), rgba(35,0,30,0.68)), url(./ReactCryptoStatsBG.jpg)',
 		backgroundSize: 'cover',
 	},
 	bannerContent: {
@@ -34,24 +35,24 @@ const Banner = () => {
 							marginBottom: 0,
 							fontFamily: 'Zen Tokyo Zoo',
 							fontWeight: 400,
-							fontSize: '5rem',
+							fontSize: '4.4rem',
 							color: '#FFD4F9',
 							wordSpacing: -16,
 						}}
 					>
-						React Crypto Stats
+						Crypto Stats
 					</Typography>
 					<Typography
 						variant='subtitle2'
 						style={{
 							fontFamily: 'Genos',
-							fontSize: '1.515rem',
-							paddingBottom: 25,
+							fontSize: '1.44rem',
 						}}
 					>
 						A cryptocurrency statistical analysis app coded in React.
 					</Typography>
 				</div>
+				<Carousel />
 			</Container>
 		</div>
 	);

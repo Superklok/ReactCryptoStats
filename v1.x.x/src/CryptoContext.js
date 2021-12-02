@@ -9,10 +9,10 @@ const Crypto = createContext();
 
 const CryptoContext = ({children}) => {
 	const [currency, setCurrency] = useState('CAD'),
-		  [symbol, setSymbol]     = useState('CA$');
+		  [symbol, setSymbol]     = useState('$');
 
 	useEffect(() => {
-		if (currency === 'CAD') setSymbol('CA$');
+		if (currency === 'CAD') setSymbol('$');
 		else if (currency === 'EUR') setSymbol('€');
 		else if (currency === 'GBP') setSymbol('£');
 		else if (currency === 'USD') setSymbol('$');
