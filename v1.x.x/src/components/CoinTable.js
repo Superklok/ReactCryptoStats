@@ -4,6 +4,7 @@ import axios from 'axios';
 import {CoinList} from '../config/api';
 import {CryptoState} from '../CryptoContext';
 import {numberWithCommas} from '../components/Banner/Carousel';
+import {Pagination} from '@material-ui/lab';
 import {
 	Container, 
 	createTheme, 
@@ -24,6 +25,7 @@ const CoinTable = () => {
 	const [coins, setCoins]       = useState([]),
 		  [loading, setLoading]   = useState(false),
 		  [search, setSearch]     = useState(''),
+		  [page, setPage]         = useState(1),
 		  history                 = useHistory(),
 		  {currency, symbol}      = CryptoState(),
 		  fetchCoins              = async () => {
@@ -76,6 +78,13 @@ const CoinTable = () => {
 									 backgroundColor: '#4A0040',
 								 },
 							 },
+							 pagination: {
+								 '& .MuiPaginationItem-root': {
+									 color: '#FFBA49',
+									 fontFamily: 'Genos',
+									 fontSize: 24,
+								 },
+							 },
 						 })),
 		  classes      = useStyles();
 
@@ -92,6 +101,8 @@ const CoinTable = () => {
 					label='Look up a cryptocurrency...'
 					variant='outlined'
 					style={{marginBottom: 20, width: '100%'}}
+					InputProps={{style:{fontSize: 24, fontFamily: 'Genos'}}}
+					InputLabelProps={{style:{fontSize: 24, fontFamily: 'Genos'}}}
 					onChange={(e) => setSearch(e.target.value)}
 				/>
 				<TableContainer>
@@ -118,7 +129,9 @@ const CoinTable = () => {
 								</TableRow>
 							</TableHead>
 							<TableBody>
-								{handleSearch().map(row => {
+								{handleSearch()
+								.slice((page - 1) * 10, (page - 1) * 10 + 10)
+								.map(row => {
 									const profit = row.price_change_percentage_24h > 0;
 
 									return (
@@ -213,6 +226,20 @@ const CoinTable = () => {
 						</Table>
 					)}
 				</TableContainer>
+				<Pagination 
+					style={{
+						padding: 20,
+						width: '100%',
+						display: 'flex',
+						justifyContent: 'center',
+					}}
+					classes={{ul: classes.pagination}}
+					count={(handleSearch()?.length/10).toFixed(0)}
+					onChange={(_, value) => {
+						setPage(value);
+						window.scroll(0, 450);
+					}}
+				/>
 			</Container>
 		</ThemeProvider>
 	);
