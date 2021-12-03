@@ -100,6 +100,13 @@ const CoinInfo = ({coin}) => {
 										},
 									],
 								}}
+								options={{
+									elements: {
+										point: {
+											radius: 1,
+										},
+									},
+								}}
 							/>
 							<div
 								style={{
