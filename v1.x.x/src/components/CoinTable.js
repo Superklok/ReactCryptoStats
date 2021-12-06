@@ -94,7 +94,11 @@ const CoinTable = () => {
 			<Container style={{textAlign: 'center'}}>
 				<Typography
 					variant='h4'
-					style={{margin: 18, fontFamily: 'Genos'}}
+					style={{
+						margin: 18, 
+						fontFamily: 'Genos', 
+						fontSize: 32,
+					}}
 				>
 					Cryptocurrency Prices By Market Cap
 				</Typography>
@@ -119,7 +123,7 @@ const CoinTable = () => {
 												color: '#23001E',
 												fontWeight: '800',
 												fontFamily: 'Genos',
-												fontSize: 16,
+												fontSize: 19,
 											}}
 											key={head}
 											align={head === 'Coin' ? '' : 'right'}
@@ -190,7 +194,7 @@ const CoinTable = () => {
 													borderColor: '#23001E',
 												}}
 											>
-												{symbol}{' '}
+												{symbol}
 												{numberWithCommas(row.current_price.toFixed(2))}
 											</TableCell>
 											<TableCell
@@ -214,7 +218,7 @@ const CoinTable = () => {
 													borderColor: '#23001E',
 												}}
 											>
-												{symbol}{' '}
+												{symbol}
 												{numberWithCommas(
 													row.market_cap.toString().slice(0, -6)
 												)}
@@ -227,9 +231,11 @@ const CoinTable = () => {
 						</Table>
 					)}
 				</TableContainer>
-				<Pagination 
+			</Container>
+			<Pagination 
 					style={{
-						padding: 20,
+						paddingTop: 20,
+						paddingBottom: 20,
 						width: '100%',
 						display: 'flex',
 						justifyContent: 'center',
@@ -241,7 +247,6 @@ const CoinTable = () => {
 						window.scroll(0, 450);
 					}}
 				/>
-			</Container>
 		</ThemeProvider>
 	);
 }

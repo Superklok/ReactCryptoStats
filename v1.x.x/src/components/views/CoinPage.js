@@ -131,7 +131,7 @@ const CoinPage = () => {
 								color: '#FFD4F9',
 							}}
 						>
-							{symbol}{' '}
+							{symbol}
 							{numberWithCommas(
 								coin?.market_data.current_price[currency.toLowerCase()]
 							)}
@@ -150,7 +150,7 @@ const CoinPage = () => {
 								color: '#FFD4F9',
 							}}
 						>
-							{symbol}{' '}
+							{symbol}
 							{numberWithCommas(
 								coin?.market_data.market_cap[currency.toLowerCase()]
 								.toString()

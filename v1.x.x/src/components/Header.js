@@ -19,7 +19,7 @@ const useStyles                   = makeStyles(() => ({
 											fontWeight: 400,
 											fontSize: '2.4rem',
 											color: '#FFBA49',
-											wordSpacing: -8,
+											letterSpacing: 2,
 											cursor: 'pointer',
 										},
 									})),
@@ -63,7 +63,7 @@ const useStyles                   = makeStyles(() => ({
 							variant='h6'
 							className={classes.title}
 						>
-							Crypto Stats
+							RCS
 						</Typography>
 						<Select
 							variant='outlined' 

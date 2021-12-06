@@ -35,9 +35,9 @@ const Banner = () => {
 							marginBottom: 0,
 							fontFamily: 'Zen Tokyo Zoo',
 							fontWeight: 400,
-							fontSize: '4.4rem',
+							fontSize: '3.5rem',
 							color: '#FFD4F9',
-							wordSpacing: -16,
+							wordSpacing: -10,
 						}}
 					>
 						Crypto Stats

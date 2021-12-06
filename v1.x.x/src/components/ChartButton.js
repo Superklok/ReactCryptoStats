@@ -5,9 +5,10 @@ const ChartButton = ({children, selected, onClick}) => {
 						  chartButton: {
 							  border: '1px solid #FFBA49',
 							  borderRadius: 5,
-							  padding: 10,
-							  paddingLeft: 20,
-							  paddingRight: 20,
+							  padding: 5,
+							  display: 'flex',
+							  alignItems: 'center',
+							  justifyContent: 'center',
 							  fontFamily: 'Genos',
 							  fontSize: 20,
 							  cursor: 'pointer',
