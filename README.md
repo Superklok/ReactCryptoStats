@@ -1,4 +1,4 @@
-# React Crypto Stats v1.16.11
+# React Crypto Stats v1.18.1
 <br />
 
 ## Basic Root User Deployment Guide For App Evaluation
@@ -261,7 +261,7 @@
 
 ###### Deployment Tools & Services
 
-[<img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" />][nginx] [<img src="https://img.shields.io/static/v1?style=for-the-badge&message=Let%E2%80%99s+Encrypt&color=003A70&logo=Let%E2%80%99s+Encrypt&logoColor=FFFFFF&label=" />][letsencrypt] [<img src="https://img.shields.io/static/v1?style=for-the-badge&message=Vultr&color=007BFC&logo=Vultr&logoColor=FFFFFF&label=" />][vultr]
+[<img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />][docker] [<img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" />][nginx] [<img src="https://img.shields.io/static/v1?style=for-the-badge&message=Let%E2%80%99s+Encrypt&color=003A70&logo=Let%E2%80%99s+Encrypt&logoColor=FFFFFF&label=" />][letsencrypt] [<img src="https://img.shields.io/static/v1?style=for-the-badge&message=Vultr&color=007BFC&logo=Vultr&logoColor=FFFFFF&label=" />][vultr]
 
 <br />
 <br />
@@ -277,6 +277,7 @@
 [chartjs]: https://www.chartjs.org/docs/latest/getting-started/installation.html
 [node]: https://nodejs.org/en/docs/guides/
 [npm]: https://docs.npmjs.com/cli/v7/commands/npm
+[docker]: https://hub.docker.com/r/superklok/reactcryptostats/tags
 [nginx]: https://docs.nginx.com/
 [letsencrypt]: https://certbot.eff.org/
 [vultr]: https://www.vultr.com/
