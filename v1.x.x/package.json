@@ -1,13 +1,13 @@
 {
   "name": "reactcryptostats",
-  "version": "1.18.1",
+  "version": "1.18.5",
   "description": "React Crypto Stats",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Superklok/ReactCryptoStats.git"
   },
-  "author": "Trev Morin <trev@superklok.com> (http://trevmorin.com)",
+  "author": "Trevor Morin <trev@superklok.com> (https://superkloklabs.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Superklok/ReactCryptoStats/issues"
